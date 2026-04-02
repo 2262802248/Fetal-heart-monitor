@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:text="胎心监测系统"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"/>
+
+    <!-- 连接状态 -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="未连接"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:paddingBottom="8dp"/>
+
+    <!-- 心率显示 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="24dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:text="实时胎心率"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_bpm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-- BPM"
+            android:textSize="56sp"
+            android:textStyle="bold"
+            android:textColor="#E53935"
+            android:gravity="center"/>
+
+        <TextView
+            android:text="正常范围：120-160 BPM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#AAAAAA"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- AI分析结果 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:text="AI分析结果"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_analysis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="等待数据中..."
+            android:textSize="13sp"
+            android:textColor="#444444"
+            android:minHeight="80dp"/>
+
+        <TextView
+            android:text="⚠️ 分析结果仅供参考，异常请立即就医"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="#FF6F00"
+            android:paddingTop="8dp"/>
+    </LinearLayout>
+
+    <!-- 按钮区域 -->
+    <Button
+        android:id="@+id/btn_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="扫描并连接胎心仪"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btn_analyze"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送数据给AI分析"
+        android:enabled="false"/>
+
+</LinearLayout>
